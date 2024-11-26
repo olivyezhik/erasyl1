@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login Page</title> 
+    <link rel="stylesheet" href="styles.css"> 
+    <script> 
+        function validateLogin() { 
+            const username = document.getElementById("username").value; 
+            const password = document.getElementById("password").value; 
+ 
+            if (username === "student" && password === "password123") { 
+                window.location.href = "personal.html"; 
+            } else { 
+                alert("Incorrect username or password. Try again."); 
+            } 
+            return false;  
+        } 
+    </script> 
+</head> 
+<body> 
+    <h1>Login</h1> 
+    <form onsubmit="return validateLogin();"> 
+        <div> 
+            <label for="username">Username:</label> 
+            <input type="text" id="username" required> 
+        </div> 
+ 
+        <div> 
+            <label for="password">Password:</label> 
+            <input type="password" id="password" required> 
+        </div> 
+ 
+        <button type="submit">Login</button> 
+    </form> 
+</body> 
+</html>
